@@ -26,6 +26,7 @@ public class SearchController {
     @RequestMapping(value = "results")
     public String search(Model model,
     @RequestParam String searchType, @RequestParam String searchTerm) {
+
         model.addAttribute("columns", ListController.columnChoices);
 
         if (searchType.equals("all")) {
